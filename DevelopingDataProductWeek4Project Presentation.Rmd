@@ -1,0 +1,58 @@
+---
+title: "Developing Data Product Week 4 Project"
+author: "Dheeraj Singh"
+date: "June 12, 2018"
+output:
+  beamer_presentation: default
+  ioslides_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Purpose of Project
+
+Developing Shiny App
+
+- Use Shiny to build data product application and deploy it on Rstudio's servers
+- Shiny Application should include some form of input (widget: textbox, checkbox, ...)
+- Some operation on the ui input in sever.R
+- Some reactive output displayed as a result of server calculationsll as the output of any embedded R code chunks within the document.
+
+## R Presenter
+
+- use Slidify or Rstudio Presenter to prepare a reproducible pitch presentation for application
+- It must be 5 pages
+- Being hosted on github or Rpubs
+- contained some embedded R code
+
+## Shiny Application
+
+- Application tries to explain different distribution models
+- it explains Unifrom, uniform, Exponential and Cauchy distributions.
+- Dynamic plots of the above distribution
+- Used radio buttons to navigate in the app
+
+## summary of the numbers
+
+```{r, echo = TRUE,}
+
+summary(runif(1:10000))
+summary( rnorm(1:10000))
+summary(rexp(1:10000))
+summary(rcauchy(1:10000))
+
+```
+
+## Slide with Plot
+
+```{r pressure}
+par(mfrow = c(2,2))
+hist(runif(1:10000), col = "gray")
+hist(rnorm(1:10000), col = "gray")
+hist(rexp(1:10000), col = "gray")
+hist(rcauchy(1:10000), col = "gray")
+
+```
+
